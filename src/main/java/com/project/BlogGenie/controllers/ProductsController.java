@@ -1,6 +1,7 @@
 package com.project.BlogGenie.controllers;
 
 import com.project.BlogGenie.models.Product;
+import com.project.BlogGenie.models.ProductDto;
 import com.project.BlogGenie.services.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -22,10 +23,18 @@ public class ProductsController {
 
     @GetMapping({"", "/"}) // ye url /products se accessible hai
 //    ye method http get method se accessible hga islye ye annotation
-    public String showProductList(Model model){
+    public String showProductList(Model model) {
 //        List<Product> products = repo.findAll(); // in ascending
         List<Product> products = repo.findAll(Sort.by(Sort.Direction.DESC, "id")); // in ascending
         model.addAttribute("products", products);
         return "products/index"; // name of html file which will return
+    }
+
+//        this method will allow users to create new products
+    @GetMapping("/create") // accessible from http get method
+    public String showCreatePage(Model model){
+        ProductDto productDto = new ProductDto();
+        model.addAttribute("productDto", productDto);
+        return "products/CreateProduct";  // name of html file returned
     }
 }
