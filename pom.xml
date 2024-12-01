@@ -12,7 +12,7 @@
 	<artifactId>BlogGenie</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BlogGenie</name>
-	<description>AI-powered blogging platform with CRUD, comments, likes, and AI topic suggestions.</description>
+	<content>AI-powered blogging platform with CRUD, comments, likes, and AI topic suggestions.</content>
 	<url/>
 	<licenses>
 		<license/>

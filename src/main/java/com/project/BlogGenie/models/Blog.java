@@ -3,22 +3,22 @@ package com.project.BlogGenie.models;
 import jakarta.persistence.*;
 import java.util.Date;
 
+// Blog.java
 @Entity
-@Table(name = "products")
-public class Product {
+@Table(name = "blogs") // products
+public class Blog { // Product
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
-    private String brand;
+    private String author; // brand
     private String category;
-    private double price;
 
     @Column(columnDefinition = "TEXT")
-    private String description;
+    private String content; // renamed from description
     private Date createdAt;
-    private String imageFileName ;
+    private String imageFileName;
 
     public int getId() {
         return id;
@@ -36,14 +36,6 @@ public class Product {
         this.name = name;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public String getCategory() {
         return category;
     }
@@ -52,20 +44,20 @@ public class Product {
         this.category = category;
     }
 
-    public double getPrice() {
-        return price;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public String getDescription() {
-        return description;
+    public String getContent() { // updated getter for content
+        return content;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setContent(String content) { // updated setter for content
+        this.content = content;
     }
 
     public Date getCreatedAt() {
@@ -83,5 +75,4 @@ public class Product {
     public void setImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
     }
-
 }
