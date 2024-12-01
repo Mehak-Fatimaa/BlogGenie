@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BlogGenie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #686565;
+            color: #ffffff;
+        }
+
+        .header {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            color: #fff;
+        }
+
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            height: 60px; /* Adjust the size as needed */
+            width: 60px; /* Keep it the same as height for a perfect circle */
+            border-radius: 50%; /* Makes the image circular */
+            margin-right: 0.5rem;
+        }
+
+        .header .logo span {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #ffd700; /* Highlight color */
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .story {
+            flex: 1;
+            min-width: 48%; /* Adjusts width to fit two stories per row */
+            background-color: #282828;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .story img {
+            width: 100%;
+            max-width: 400px; /* Larger image size */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgb(39, 39, 39);
+            margin-bottom: 1rem;
+        }
+
+        .story h2 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #fcfcfc;
+            padding-bottom: 0.3rem;
+        }
+
+        .story p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="C:\Users\Lenovo\OneDrive\Documents\Semester2\image4.jpg" alt="BlogGenie Logo"> <!-- Replace with the path to your logo image -->
+            <span>BlogGenie</span>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#blogs">Blog</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="section">
+        <!-- Story 1 and 2 in one row -->
+        <div class="story">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.CSThJ0qpV3XKsURD0iKZ0AHaEK&pid=Api&P=0&h=220" alt="Founding Moment">
+            <h2>Our Beginning</h2>
+            <p>BlogGenie was founded with a shared belief: that everyone should have the opportunity to share their voice with the world. What started as a simple idea among friends soon turned into a project driven by passion and creativity.</p>
+        </div>
+
+        <div class="story">
+            <img src="early-team.jpg" alt="Early Team">
+            <h2>The Team</h2>
+            <p>Our team consists of passionate individuals who are dedicated to making blogging more accessible. From developers to designers, each member brought their unique skills and vision to the project, shaping BlogGenie into what it is today.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <!-- Story 3 and 4 in one row -->
+        <div class="story">
+            <img src="first-launch.jpg" alt="First Launch">
+            <h2>The First Launch</h2>
+            <p>After months of hard work, we launched BlogGenie to the public. It was a moment of excitement and anticipation. The feedback we received helped us refine our platform and better serve our users.</p>
+        </div>
+
+        <div class="story">
+            <img src="community.jpg" alt="Community">
+            <h2>Growing Our Community</h2>
+            <p>BlogGenie quickly grew from a small project to a thriving community of creators. We built a space where users could share ideas, learn from each other, and inspire one another.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <!-- Story 5 and 6 in one row -->
+        <div class="story">
+            <img src="milestone.jpg" alt="Milestone">
+            <h2>Milestones and Achievements</h2>
+            <p>Over the years, we have reached significant milestones, including being featured in leading tech publications and celebrating our growing number of active users. Each success has motivated us to continue pushing boundaries and innovating.</p>
+        </div>
+
+        <div class="story">
+            <img src="future-vision.jpg" alt="Future Vision">
+            <h2>Looking Ahead</h2>
+            <p>As we move forward, our vision remains clear: to keep improving BlogGenie and empower people around the world to share their stories and ideas. We are excited about the future and the endless possibilities ahead.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 BlogGenie. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:support@bloggenie.com">support@bloggenie.com</a></p>
+    </footer>
+</body>
+</html>
