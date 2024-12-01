@@ -158,4 +158,16 @@ public class BlogsController {
         }
         return "redirect:/blogs";
     }
+
+    @GetMapping("/view")
+    public String viewBlog(@RequestParam int id, Model model) {
+        try {
+            Blog blog = repo.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid blog ID: " + id));
+            model.addAttribute("blog", blog);
+        } catch (Exception ex) {
+            System.out.println("Exception: " + ex.getMessage());
+            return "redirect:/blogs";
+        }
+        return "blogs/ViewBlog";
+    }
 }
