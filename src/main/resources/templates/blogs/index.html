@@ -9,14 +9,124 @@
         tr:hover {
             background-color: #f1f1f1;
         }
+           body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: 'Roboto', sans-serif;
+        background-color: #3b3b3b;
+        color: #dbdbdb;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background: #18181880;
+        padding: 1rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+
+    .header nav {
+        display: flex;
+        gap: 1rem;
+        margin-left: 50px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .logo span {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffd700;
+    }
+
+    .header a, .header span {
+        color: #eeeeee;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.5 rem;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .header a:hover {
+        color: #000000;
+        background-color: #686868;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .header a:active {
+        background-color: #003f7f;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    footer a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    .mainhead {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       padding-top: 5rem;
+       padding-bottom: 1rem;
+       font-size: 2rem;
+    }
+    .tbody {
+        background-color: #3b3b3b !important;
+        color: white;
+    }
     </style>
 
 </head>
 <body>
+<!-- Header -->
+<header class="header">
+    <div class="logo">
+        <img src="logo.jpg" alt="BlogGenie Logo">
+        <span>BlogGenie</span>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blogs">Blog</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+    </nav>
+</header>
 <div class="container">
+    <div class="mainhead">
     <h1 class="text-center my-4">Blogs</h1>
+    </div>
     <a class="btn btn-primary mb-3" href="/blogs/create">Create Blog</a>
-
     <table class="table table-bordered table-hover">
         <thead class="table-dark text-center">
         <tr>
@@ -29,7 +139,7 @@
             <th>Actions</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="tbody">
         <tr th:each="blog : ${blogs}"
             th:onclick="'location.href=\'/blogs/view?id=' + ${blog.id} + '\';'"
             style="cursor: pointer;">
@@ -52,8 +162,11 @@
         </tr>
         </tbody>
     </table>
-
 </div>
+<footer>
+    <p>&copy; 2024 BlogGenie. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:support@bloggenie.com">support@bloggenie.com</a></p>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

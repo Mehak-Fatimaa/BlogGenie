@@ -45,7 +45,7 @@ public class BlogsController {
             result.addError(new FieldError("blogDto", "imageFile", "The image file is required."));
         }
         if (result.hasErrors()) {
-            return "/blogs/CreateBlog";
+            return "blogs/CreateBlog";
         }
 
         MultipartFile image = blogDto.getImageFile();
@@ -170,4 +170,5 @@ public class BlogsController {
         }
         return "blogs/ViewBlog";
     }
+
 }
